@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For my Chakku</title>
+  <meta name="description" content="A cinematic farewell friendship scrapbook for a best friend moving from Dubai to the UK." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="starfield" aria-hidden="true"></div>
+  <div id="sparkles" aria-hidden="true"></div>
+
+  <div class="ambient-overlay" aria-hidden="true"></div>
+
+  <header class="landing" id="landing">
+    <div class="landing__content">
+      <span class="eyebrow">A farewell memory book</span>
+      <h1>Before You Leave For The UK...</h1>
+      <p class="landing__subtext">"I wanted to leave you with something."</p>
+      <button id="startJourney" class="primary-button">START THE JOURNEY</button>
+      <p class="landing__hint">Scroll slowly. Tap things. Let the memories open themselves.</p>
+    </div>
+
+    <div class="landing__art" aria-hidden="true">
+      <div class="floating-polaroid float-a"></div>
+      <div class="floating-polaroid float-b"></div>
+      <div class="floating-polaroid float-c"></div>
+      <div class="paper-plane"></div>
+      <div class="landing__glow"></div>
+    </div>
+  </header>
+
+  <div class="music-player" id="musicPlayer" aria-label="Global music player">
+    <div class="music-player__info">
+      <span class="music-player__label">Memory soundtrack</span>
+      <strong id="trackTitle">Waiting to begin</strong>
+      <small id="trackStatus">Press start to begin the journey</small>
+    </div>
+    <div class="music-player__controls">
+      <button class="icon-button" id="prevTrack" aria-label="Previous track">⟨</button>
+      <button class="icon-button icon-button--primary" id="playPause" aria-label="Play or pause">▶</button>
+      <button class="icon-button" id="nextTrack" aria-label="Next track">⟩</button>
+    </div>
+    <label class="volume" aria-label="Volume">
+      <span>Volume</span>
+      <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.75" />
+    </label>
+    <audio id="audioPlayer" preload="auto"></audio>
+  </div>
+
+  <main id="journey" class="journey">
+    <section class="chapter chapter--intro reveal" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Chapter 1</p>
+        <h2>The Day Everything Started</h2>
+        <p>We had absolutely no idea that one random day at university would turn into years of friendship.</p>
+      </div>
+    </section>
+
+    <section class="memory-card reveal" data-memory="0">
+      <div class="memory-card__frame">
+        <div class="photo-shell">
+          <img data-photo alt="Memory 1" />
+        </div>
+        <p class="memory-card__caption" data-caption></p>
+      </div>
+    </section>
+
+    <section class="chapter reveal" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Chapter 2</p>
+        <h2>The Dynamic Duo</h2>
+        <p>Projects, assignments, and the kind of teamwork that only survives when two people are equally determined and equally dramatic.</p>
+        <div class="notification-stack" aria-hidden="true">
+          <span>Deadline approaching.</span>
+          <span>We'll do it tomorrow.</span>
+          <span>Why is this report so long?</span>
+          <span>Submitted at 11:59 PM.</span>
+        </div>
+        <p class="chapter__quote">We somehow survived every project life threw at us.</p>
+      </div>
+    </section>
+
+    <section class="memory-card reveal" data-memory="1">
+      <div class="memory-card__frame">
+        <div class="photo-shell">
+          <img data-photo alt="Memory 2" />
+        </div>
+        <p class="memory-card__caption" data-caption></p>
+      </div>
+    </section>
+
+    <section class="chapter reveal" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Chapter 3</p>
+        <h2>We Grew Up Together</h2>
+        <p>We've seen versions of each other most people never get to see.</p>
+        <div class="timeline" aria-hidden="true">
+          <span class="timeline__item">My Kozhi phase</span>
+          <span class="timeline__item">Break ups</span>
+          <span class="timeline__item">Deadlines</span>
+          <span class="timeline__item">Falling in love</span>
+          <span class="timeline__item">Breakdowns</span>
+          <span class="timeline__item">Final year</span>
+          <span class="timeline__item">Crash Outs</span>
+          <span class="timeline__item">Giving up in life</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory-card reveal" data-memory="2">
+      <div class="memory-card__frame">
+        <div class="photo-shell">
+          <img data-photo alt="Memory 3" />
+        </div>
+        <p class="memory-card__caption" data-caption></p>
+      </div>
+    </section>
+
+    <section class="chapter chapter--lunchbox reveal" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Chapter 4</p>
+        <h2>The Lunchbox Chapter</h2>
+        <p class="chapter__quote">The Food Was Never Just Food</p>
+        <div class="lunchbox-story">
+          <p>Some people show they care through words.</p>
+          <p>You showed it through food.</p>
+          <p>Your mom packed food for you.</p>
+          <p>And somehow a portion of it always found its way to me.</p>
+          <p>At the time it felt normal.</p>
+          <p>Now I realize it was one of the ways I always knew somebody cared.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory-card reveal" data-memory="3">
+      <div class="memory-card__frame">
+        <div class="photo-shell">
+          <img data-photo alt="Memory 4" />
+        </div>
+        <p class="memory-card__caption" data-caption></p>
+      </div>
+    </section>
+
+    <section class="chapter reveal" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Chapter 5</p>
+        <h2>Our Empty Classroom Days</h2>
+        <p>The classes we cut, the empty classrooms we borrowed, the videos we watched, and all the stories we told each other in the quiet.</p>
+      </div>
+      
+    </section>
+
+    <section class="memory-card reveal" data-memory="4">
+      <div class="memory-card__frame">
+        <div class="photo-shell">
+          <img data-photo alt="Memory 5" />
+        </div>
+        <p class="memory-card__caption" data-caption></p>
+      </div>
+    </section>
+
+    <section class="chapter reveal" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Chapter 6</p>
+        <h2>Friendship Wrapped</h2>
+        <p>An entirely scientific summary of our friendship, according to the universe and possibly a spreadsheet.</p>
+      </div>
+      <div class="wrapped" aria-hidden="true">
+        <div class="stat"><span>Years of Friendship</span><strong data-counter="4">0</strong></div>
+        <div class="stat"><span>Projects Survived</span><strong data-counter="12">0</strong></div>
+        <div class="stat"><span>Meals Shared</span><strong data-counter="300">0</strong></div>
+        <div class="stat"><span>Inside Jokes</span><strong data-counter="200">0</strong></div>
+        <div class="stat"><span>Teas Spilled</span><strong data-counter="400">0</strong></div>
+        <div class="stat"><span>Memories Shared</span><strong data-counter="1000">0</strong></div>
+        <div class="legendary">
+          <span>FRIENDSHIP LEVEL</span>
+          <strong>LEGENDARY</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory-card reveal" data-memory="5">
+      <div class="memory-card__frame">
+        <div class="photo-shell">
+          <img data-photo alt="Memory 6" />
+        </div>
+        <p class="memory-card__caption" data-caption></p>
+      </div>
+    </section>
+
+    <section class="chapter reveal" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Chapter 7</p>
+        <h2>Different Countries, Same Friendship</h2>
+        <p>The distance is changing.</p>
+        <p>The friendship isn't.</p>
+      </div>
+      <div class="map-scene" aria-hidden="true">
+        <div class="map-scene__base"></div>
+        <div class="map-scene__route"></div>
+        <div class="map-scene__plane">✈</div>
+        <div class="map-scene__label map-scene__label--dubai">Dubai</div>
+        <div class="map-scene__label map-scene__label--uk">United Kingdom</div>
+      </div>
+    </section>
+
+    <section class="memory-card reveal" data-memory="6">
+      <div class="memory-card__frame">
+        <div class="photo-shell">
+          <img data-photo alt="Memory 7" />
+        </div>
+        <p class="memory-card__caption" data-caption></p>
+      </div>
+    </section>
+
+
+    <section class="album reveal" id="album" data-reveal>
+      <div class="chapter__content">
+        <p class="chapter__kicker">Our Album</p>
+        <h2>Scattered Pages of Us</h2>
+        <p>A wooden desk, a pile of polaroids, and years of friendship in one place.</p>
+      </div>
+      <div class="album-grid" id="albumGrid"></div>
+    </section>
+
+    <section class="finale reveal" id="finale" data-reveal>
+      <div class="finale__stars" aria-hidden="true"></div>
+      <div class="finale__content">
+        <img class="finale__photo" data-final-photo alt="Final farewell memory" />
+        <div class="finale__text" id="finalText"></div>
+        <div class="finale__heart">❤️</div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="toast" id="toast" role="status" aria-live="polite"></aside>
+
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup__backdrop" data-close-popup></div>
+    <div class="popup__card">
+      <button class="popup__close" data-close-popup aria-label="Close popup">×</button>
+      <h3 id="popupTitle"></h3>
+      <p id="popupText"></p>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" data-close-lightbox></div>
+    <div class="lightbox__panel">
+      <button class="popup__close" data-close-lightbox aria-label="Close lightbox">×</button>
+      <img id="lightboxImage" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <div class="secret-overlay" id="secretOverlay" aria-hidden="true">
+    <div class="secret-overlay__backdrop" data-close-secret></div>
+    <section class="secret-card">
+      <button class="popup__close" data-close-secret aria-label="Close secret overlay">×</button>
+      <p class="chapter__kicker">Hidden Letter</p>
+      <h2>Thank You For Staying</h2>
+      <p class="secret-card__intro">This is the hidden space for the letter you said you would write later.</p>
+      <textarea class="secret-card__letter" placeholder="Write the personal letter here whenever you are ready..."></textarea>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
